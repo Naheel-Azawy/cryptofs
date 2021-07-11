@@ -18,7 +18,8 @@ class CryptoFS(CryptoFSBase):
 def usage():
     print("usage: cryptofs <ROOT> <MOUNT>")
 
-def main(args):
+def main():
+    args = sys.argv[1:]
     if len(args) != 2:
         usage()
         return 1
@@ -33,6 +34,3 @@ def main(args):
     fs = CryptoFS(root, mount, password)
     fs.start(foreground=False, allow_other=False)
     return 0
-
-if __name__ == "__main__":
-    exit(main(sys.argv[1:]))
