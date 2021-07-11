@@ -1,0 +1,6 @@
+* CryptoFS
+  An encrypted filesystem using fuse.
+  TODO: document
+
+** License
+   GPL-3.0
